@@ -23,15 +23,7 @@ def welcome_user():
 
 @app.route("/logout")
 def logout():
-    token = blueprint.token["access_token"]
-    resp = google.post(
-        "https://accounts.google.com/o/oauth2/revoke",
-        params={"token": token},
-        headers={"Content-Type": "application/x-www-form-urlencoded"}
-    )
-    assert resp.ok, resp.text
-    logout_user()       
-    del blueprint.token  
+    logout_user()         
     return redirect(url_for('index'))
 
 
