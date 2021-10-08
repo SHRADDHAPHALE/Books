@@ -1,8 +1,8 @@
-"""Updated
+"""First commit with postgres
 
-Revision ID: 811310f49ee2
+Revision ID: a55aa09aad53
 Revises: 
-Create Date: 2021-10-08 00:07:19.179988
+Create Date: 2021-10-08 22:16:36.270541
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '811310f49ee2'
+revision = 'a55aa09aad53'
 down_revision = None
 branch_labels = None
 depends_on = None

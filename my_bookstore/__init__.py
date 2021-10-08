@@ -16,7 +16,9 @@ blueprint = make_google_blueprint(client_id="522141288574-7ir7qd4f61de0ghch8fp6h
 
 app.config["SECRET_KEY"] = "mysecretkey"
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir, "data.sqlite")
+#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir, "data.sqlite")
+#app.config.from_object(os.environ['APP_SETTINGS'])
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ['DATABASE_URL']
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
