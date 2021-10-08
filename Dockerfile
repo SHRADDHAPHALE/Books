@@ -4,7 +4,6 @@ WORKDIR /book/app
 
 COPY . .
 
-RUN pip3 install psycopg2
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
