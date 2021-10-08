@@ -1,4 +1,5 @@
 from my_bookstore import app, db
+import os
 from flask import render_template, redirect, url_for
 from my_bookstore.forms import AddForm, DelForm
 from my_bookstore.models import Book
@@ -73,5 +74,5 @@ def delete():
 
 
 if __name__ == '__main__':
-    #port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
