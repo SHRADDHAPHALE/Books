@@ -20,7 +20,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 #app.config.from_object(os.environ['APP_SETTINGS'])
 
 
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:root@localhost/devopsdb'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:root@localhost:5432/devopsdb'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
