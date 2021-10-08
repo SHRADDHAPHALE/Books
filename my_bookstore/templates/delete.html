@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>Book bought </h1>
+  <p>Book bought <p>
   <form method="POST">
       {{ form.hidden_tag() }}
       {{ form.isbn.label }} {{ form.isbn() }}
