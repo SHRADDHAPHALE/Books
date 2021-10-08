@@ -8,8 +8,8 @@ from flask_dance.contrib.google import google
 
 @app.route('/')
 def index():
-    books = Book.query.all()
-    return render_template('home.html', books=books)
+    #books = Book.query.all()
+    return render_template('home.html')
 
 @app.route('/welcome')
 def welcome_user():
